@@ -14,4 +14,5 @@ function myFunction() {
   } else {
     header.classList.remove("sticky");
   }
-} 
+} #EF7270
+#f5aaa9
