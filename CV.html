@@ -18,7 +18,7 @@
     <header class="header" id="myHeader">
         <nav>
             <div class="container">
-            <!-- <img src="Images-icons-logos/prezi.svg" alt="Logo Apolline Ponce"> -->
+            <img src="Images-icons-logos/logo_AP.svg" alt="Logo Apolline Ponce" width="80px" height="80px"/>
             <a class="element element1" href="#Accueil">Accueil</a>
             <a class="element element2" href="#Contact">Contact</a>
             <a class="element element3" href="#Competences">Compétences</a>
@@ -34,19 +34,25 @@
     <main>
         <section id="Accueil" class="sections_principales">
                 <div id="Accueil_intro">
-                    <div>
+                    <div id="nom_photo">
                         <h1>Apolline Ponce</h1>
                         <img src="Images-icons-logos/photo.jpg" alt="Photographie d'identité de Apolline Ponce" />
                     </div>
                     <div>
                         <h2 class="h2_bleu">En reconversion dans le développement</h2> 
-                        <p>Suite à un bac+5 dans l'environnement, je suis à la recherche d'une <strong>alternance</strong> qui me permettra d'acquérir les qualifications nécessaires pour accéder à un emploi dans le développement.</p>
-                        <a href="#Contact" class="lato_bold cta">CONTACTEZ-MOI</a> 
-                        <a href="#Competences" class="lato_bold cta">DÉCOUVREZ MES COMPÉTENCES</a> 
+                        <div>
+                            <div id="synopsis">
+                                <p>Suite à un bac+5 dans l'environnement, je suis à la recherche d'une <strong>alternance</strong> qui me permettra d'acquérir les qualifications nécessaires pour accéder à un emploi dans le développement.</p>
+                            </div>
+                            <div id="cta_accueil">
+                            <a href="#Contact" class="lato_bold cta">CONTACTEZ-MOI</a> 
+                            <a href="#Competences" class="lato_bold cta">DÉCOUVREZ MES COMPÉTENCES</a> 
+                            </div>
+                        </div>
                     </div>
                 </div>
                 <div>
-                    <h3 class="h3_noir">En apprendre plus sur...</h2>
+                    <h3 class="h3_noir apprendre">En apprendre plus sur...</h2>
                     <a href="#Experiences" class="lato_bold cta_gris">Mes expériences professionelles</a>
                     <a href="#Formation" class="lato_bold cta_gris">Mon parcours de formation</a>
                     <a href="#Benevolat_loisirs" class="lato_bold cta_gris" >Mes loisirs et bénévolat</a>
@@ -92,41 +98,38 @@
         </section>
         <section id="Competences" class="sections_principales">
             <h2 class="h2_noir">Mes compétences</h2>
-            <div>
-                <h3 class="h3_bleu">LANGUES</h3>
-                <!-- icon ici <img src="images/image.png" alt="Icône adresse"> -->
-                <p>Anglais C1 (<strong>TOIEC 980</strong>)</p>
-                <p>Espagnol A2</p>
-                <p>Japonais A2</p>
-            </div>
-            <div>
-                <ul class="lato">
-                    <li>Notions de base dans l'HTML, CSS et JavaScript</li>
-                    <li>PAO : Canva, Prezi. Maîtrise Pack Office, Figma</li>
-                    <li>Analyses unies et multivariées (Notions Rstudio)</li>
-                    <li>Logiciels vidéo, son et image (Open shot, Audacity, GIMP)</li>
-                    <li>Prévention et secours civiques de niveau 1</li>
-                </ul>
+            <div id="langues_competences">
                 <div>
-                    <div><!-- icon ici <img src="images/image.png" alt="Icône adresse"> --></div>
-                    <div><!-- icon ici <img src="images/image.png" alt="Icône adresse"> --></div>
-                    <div><!-- icon ici <img src="images/image.png" alt="Icône adresse"> --></div>
-                    <div><!-- icon ici <img src="images/image.png" alt="Icône adresse"> --></div>
+                    <h3 class="h3_bleu">LANGUES</h3>
+                    <!-- icon ici <img src="images/image.png" alt="Icône adresse"> -->
+                    <p>Anglais C1 (<strong>TOIEC 980</strong>)</p>
+                    <p>Espagnol A2</p>
+                    <p>Japonais A2</p>
                 </div>
                 <div>
-                    <div><!-- icon ici <img src="images/image.png" alt="Icône adresse"> --></div>
-                    <div><!-- icon ici <img src="images/image.png" alt="Icône adresse"> --></div>
-                    <div><!-- icon ici <img src="images/image.png" alt="Icône adresse"> --></div>
-                    <div><!-- icon ici <img src="images/image.png" alt="Icône adresse"> --></div>
-                </div>
-                <div>
-                    <div><!-- icon ici <img src="images/image.png" alt="Icône adresse"> --></div>
-                </div>
-                <div>
-                    <div><!-- icon ici <img src="images/image.png" alt="Icône adresse"> --></div>
-                </div>
-                <div>
-                    <div><!-- icon ici <img src="images/image.png" alt="Icône adresse"> --></div>
+                    <ul class="lato">
+                        <li>Notions de base dans l'HTML, CSS et JavaScript 
+                            <img class="logo css" src="Images-icons-logos/css.svg" alt="Icône CSS">
+                            <img class="logo html" src="Images-icons-logos/html.svg" alt="Icône HTML">
+                            <img class="logo js" src="Images-icons-logos/javascript-1.svg" alt="Icône Javascript">
+                            <img class="logo vs" src="Images-icons-logos/visual_studio.svg" alt="Icône Visual Studio Code"> 
+                        </li>
+                        <li>PAO : Canva, Prezi. Maîtrise Pack Office, Figma
+                            <img class="logo canva" src="Images-icons-logos/canva.svg" alt="Icône Canva">
+                            <img class="logo prezi" src="Images-icons-logos/prezi2.svg" alt="Icône Prezi">
+                            <img class="logo office" src="Images-icons-logos/office.svg" alt="Icône Office">
+                            <img class="logo figma" src="Images-icons-logos/Component 2.svg" alt="Icône Figma">
+                        </li>
+                        <li>Analyses unies et multivariées (Notions Rstudio)
+                            <img class="logo rstudio" src="Images-icons-logos/Rstudio.svg" alt="Icône Rstudio">
+                        </li>
+                        <li>Logiciels vidéo, son et image (Open shot, Audacity, GIMP)
+                            <img class="logo audacity" src="Images-icons-logos/audacity.svg" alt="Icône Audacity">
+                        </li>
+                        <li>Prévention et secours civiques de niveau 1
+                            <img class="logo psc1" src="Images-icons-logos/psc1.png" alt="Icône Premiers Secours">
+                        </li>
+                    </ul>
                 </div>
             </div>
         </section>
@@ -137,7 +140,7 @@
                 <div class="lato">Trier par :</div> <!-- outil de tri affiche récent et flèche -->
             </div>
             <div id="grid_experiences">
-                <div>
+                <div id="a2017">
                     <div class="box une">
                         <a href="Images-icons-logos/souris_HD.JPG" class="lien-conteneur-photo">
                         <img src="Images-icons-logos/souris.jpg" alt="Photographie de la prise de mesures corporelles d'une souris" />
@@ -147,7 +150,7 @@
                         <p>1 mois et demi, inventaire faunistique du Grau-du-Roi dans le cadre de l'Atlas de Biodiversité Communale (ABC). Polyvalence, organisation de protocoles. Inventaires (odonates, mammifères, orthoptères...)</p>
                     </div>
                 </div>
-                <div>
+                <div id="a2018">
                     <div class="box trois">
                         <h3 class="h3_bleu">2018 | Stage de Recherche | ISEM</h3>
                         <p>1 mois et demi, laboratoire avec une équipe de recherche sur la reconnaissance de soi chez Papio ursinus. Travail en équipe, recherche bibliographique, organisation base de données, analyses statistiques.</p>
@@ -157,7 +160,7 @@
                             <img src="Images-icons-logos/babouin.jpg" alt="Photographie d'un bébé babouin en train de manger"/>
                     </div>
                 </div>
-                <div>
+                <div id="a2019">
                     <div class="box cinq">
                         <a href="Images-icons-logos/mesange_HD.JPG" class="lien-conteneur-photo">
                         <img src="Images-icons-logos/mesange.jpg" alt="Photographie d'une mésange bleue tenant une chenille dans le bec, à l'entrée de son nichoir"/>
@@ -167,7 +170,7 @@
                         <p>2 mois en centre de recherche. Prédation nichoirs de Cyanistes caeruleus ogliastra selon caractéristiques environnementales. Analyse vidéo de test en open field, analyses statistiques sur R, création GLM.</p>
                     </div>
                 </div>
-                <div>
+                <div id="a2021">
                     <div class="box sept"> 
                         <h3 class="h3_bleu">2021 | Stage M1 | BE Synergis Environnement</h3>
                         <p>4 mois et demi en bureau d'études. Suivi mortalité avifaune et chiroptères, comparaison de méthodes pour estimer l'activité de chiroptères au sol. Rédaction, travail bibliographique, terrain en autonomie, initiation au traitement acoustique des chiroptères en expansion de temps.</p>
@@ -177,7 +180,7 @@
                         <img src="Images-icons-logos/eolienne.jpg" class="lien-conteneur-photo" alt="Photographie d'un paysage avec une éolienne et une voiture"/>
                     </div>
                 </div>
-                <div>
+                <div id="a2022">
                     <div class="box neuf">
                         <a href="Images-icons-logos/camera_HD.jpg">
                         <img src="Images-icons-logos/camera.jpg" class="lien-conteneur-photo" alt="Photographie d'une caméra infrarouge postée devant un bâtiment"/>

@@ -1,5 +1,6 @@
 * {
     margin: 0;
+    box-sizing: border-box;
   }
 
   body {
@@ -8,7 +9,6 @@
   }
 
 .header {
-  padding: 15px 16px;
   background: #FAC379;
   color: #000000;
   top: 0;
@@ -20,6 +20,7 @@
   display:flex;
   flex-wrap: nowrap;
   justify-content: space-around;
+  align-items: center;
 }
 
 .sections_principales:not(:first-child){
@@ -29,6 +30,10 @@
 a:not(#non_souligne, #mail a) {
   color: #000000;
   text-decoration: none;
+}
+
+.element:hover{
+  font-weight: bold;
 }
 
 h1 {
@@ -51,17 +56,17 @@ margin-bottom: 75px;
 }
 
 .h2_bleu {
-  font-family: 'League Spartan', sans-serif;
-  font-size: 2em;
-  font-weight: 400;
-  color: #096A89;
-  }
+font-family: 'League Spartan', sans-serif;
+font-size: 2em;
+font-weight: 400;
+color: #096A89;
+}
 
 .h3_bleu {
-  font-family: 'League Spartan', sans-serif;
-  font-size: 2em;
-  font-weight: 400;
-  color: #096A89;
+font-family: 'League Spartan', sans-serif;
+font-size: 2em;
+font-weight: 400;
+color: #096A89;
 }
 
 .h3_noir {
@@ -88,7 +93,7 @@ color: #ffffff;
 
 .lato_bold{
 font-family: 'Lato', sans-serif;
-font-size: 2em;
+font-size: 1.563em;
 font-weight: 700;
 color: #000000;
 }
@@ -104,7 +109,7 @@ color: #000000;
 .cta {
   background: #3AAAAF;
   transition: all 0.5s ease;
-  padding: 10px;
+  padding: 20px;
 }
 .cta:hover {
   background: #EF7270;
@@ -113,12 +118,21 @@ color: #000000;
 .cta_gris {
   transition: all 0.5s ease;
   background: #D9D9D9;
-  padding: 10px;
+  padding: 20px;
 }
 .cta_gris:hover {
   background: #EF7270;
 }
 
+#Formation{
+  margin:5em;
+}
+
+.apprendre{
+  background: #FAC379;
+  padding: 15px;
+  margin-bottom: 2em;
+}
 
 /* Hamburger menu */
 /* Nouvelles règles si la fenêtre fait au plus 1024px de large */
@@ -166,8 +180,8 @@ color: #000000;
 .grid-contact{
   display:grid;
   grid-template-columns: 1fr 1fr 1fr;
-  gap: 15px;
   margin: 0 10%;
+  gap: 15px;
 }
 
 .taille_icone img{
@@ -212,15 +226,12 @@ display: none;
   display: inline-block;
   border: 4px solid #FAC379;
   border-radius: 55px;
-  padding: 30px;
+  height: 80%;
   font-size: 1.4em;
   line-height: 1.875em;
   margin: 3%;
 }
 
-#Cesure p{
-  padding: 51px; /* 51 pour obtenir la même hauteur que master et licence qui est de 30+30+168 */
-}
 
 #sous_section{
   display: grid;
@@ -235,6 +246,7 @@ display: none;
 /* Accueil */
 #Accueil_intro{
   display: flex;
+  border: 2px solid black;
   justify-content:space-around;
   flex-direction: row;
   max-width: 100%;
@@ -242,25 +254,120 @@ display: none;
   margin: 10%
 }
 
-/* EXPERIENCES */
-#grid_experiences {
-  display: grid; 
-  grid-template-columns: 1fr 1fr; 
-  grid-template-rows: 1fr 1fr 1fr 1fr 1fr; 
-  gap: 100px 40px; 
-  grid-template-areas: 
-    "un deux"
-    "trois quatre"
-    "cinq six"
-    "sept huit"
-    "neuf dix"; 
-  justify-content: center; 
-  align-content: center; 
-  justify-items: center; 
+#synopsis{
+  margin-top: 4em;
   width: 100%;
+  line-height: 1.875em;
+  padding: 45px;
+  border: 4px solid #FAC379;
+}
+
+#Accueil_intro h2{
+  border: 2px solid black;
+  margin-top: 3em;
+}
+
+#nom_photo h1{
+  border: 2px solid rgb(255, 0, 0);
+  margin-bottom: 0.5em;
+  width: 7em;
+}
+
+#nom_photo img{
+  border: 2px solid rgb(2, 4, 146);
+}
+
+#cta_accueil{
+  border: 2px solid black;
+  margin-top: 3.25em;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+  height: 6.25em;
+}
+
+
+
+/* EXPERIENCES */
+#a2017{
+  display: flex;
+  justify-content:space-around;
+  flex-direction: row;
+  max-width: 100%;
+  align-items: flex-start;
+  margin: 10%;
+  border: 2px solid;
+}
+
+#a2018{
+  display: flex;
+  justify-content:space-around;
+  flex-direction: row;
+  max-width: 100%;
+  align-items: flex-start;
+  margin: 10%
+}
+
+#a2019{
+  display: flex;
+  justify-content:space-around;
+  flex-direction: row;
+  max-width: 100%;
+  align-items: flex-start;
+  margin: 10%
+}
+
+#a2021{
+  display: flex;
+  justify-content:space-around;
+  flex-direction: row;
+  max-width: 100%;
+  align-items: flex-start;
+  margin: 10%
+}
+
+#a2022{
+  display: flex;
+  justify-content:space-around;
+  flex-direction: row;
+  max-width: 100%;
+  align-items: flex-start;
+  margin: 10%
+}
+
+.deux {
 }
 
 .box{
- height: 150px;
- border: #000000 1px solid;
+  border: 2px solid red;
+  
+}
+
+.css, .html, .js, .vs, .canva, .prezi, .audacity, .psc1{
+  height: 3.5%;
+  width: 3.5%;
+}
+
+.office{
+  width: 3%;
+  height: 3%;
+}
+
+.figma{
+  width: 2.5%;
+  height: 2.5%;
+}
+
+.rstudio{
+  width: 10%;
+  height: 7%;
+}
+
+#langues_competences{
+  display: flex;
+  justify-content:space-evenly;
+  flex-direction: row;
+  width: auto;
+  margin: 10%
 }

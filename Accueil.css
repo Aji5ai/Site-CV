@@ -1,0 +1,9 @@
+* {
+    margin: 0; /* On enlève les marges par défaut */
+  }
+
+  
+body {
+background-color:#FDF5F4;
+text-align: center;
+}
