@@ -1,6 +1,7 @@
 * {
     margin: 0; /* On enlève les marges par défaut */
     max-width: 100%; /* On empeche des éléments de dépasser la largeur de la page */
+    box-sizing: border-box; /* Pour pas que les éléments interne sà une boite n'en dépassent */
   }
 
 /* GLOBAL */
@@ -8,13 +9,77 @@
 body { /* On défini le fond de la page et la position du texte */
 background-color:#FDF5F4;
 text-align: center;
+font-family: 'League Spartan', sans-serif;
 }
 
+h1 {
+  font-size: 4em;
+  font-weight: 400;
+  color: #096A89;
+}
+  
+h2 {
+  text-transform: uppercase;
+}
+
+.h2_noir {
+  font-size: 2.5em;
+  font-weight: 400;
+  color: #000000;
+  margin-bottom: 75px;
+}
+
+.h2_bleu {
+  font-size: 2em;
+  font-weight: 400;
+  color: #096A89;
+}
+
+.h3_bleu {
+  font-size: 2em;
+  font-weight: 400;
+  color: #096A89;
+}
+
+.h3_noir {
+  font-size: 2em;
+  font-weight: 400;
+  color: #000000;
+}
+
+p, .lato, #mail a {
+  font-family: 'Lato', sans-serif;
+  font-size: 1.5625em;
+  font-style: normal;
+  font-weight: 400;
+  color: #000000;
+}
+
+#Frise{
+  font-size: 2em;
+  font-weight: 600;
+  color: #ffffff;
+}
+
+.lato_bold{
+  font-family: 'Lato', sans-serif;
+  font-size: 1.563em;
+  font-weight: 700;
+  color: #000000;
+}
+
+.container_header a, #Accueil a { /* On retire les soulignements des liens du header et des cta de l'accueil et on les mets en noir */
+  color: #000000;
+  text-decoration: none;
+}
+
+/* HEADER */
 header { 
   background: #FAC379; 
   top: 0; /* Position du header, il commence tout en haut */
   position: fixed; /* Il ne bougera pas pendant le scroll */
   width: 100%; /* Il prend la largeur de la page */
+  z-index: 1; /* Pour éviter que les cta se superposent */
 }
 
 ul{ /* Enlève pastille liste */
@@ -32,11 +97,6 @@ ul{ /* Enlève pastille liste */
   font-family: 'Lato', sans-serif;
   font-size: 1.5em;
   font-weight: 400;
-}
-
-.container_header a { /* On retire les soulignements des liens du header et on les mets en noir */
-  color: #000000;
-  text-decoration: none;
 }
 
 .vue_ordinateur a:hover, #menu_mobile a:hover{ /* On souligne les titres du menu au survol */
@@ -97,3 +157,252 @@ padding-bottom: 10px;
 
 
 /* ACCUEIL */
+.sections_principales{
+  padding-top: 120px; /* Pour que le header ne cache pas les sections après avoir cliqué sur les liens du menu */
+}
+
+.cta {
+  transition: all 0.5s ease; /* Transition douce */
+  background: #3AAAAF;
+  padding: 3%; /* Pour que le texte ne soit pas collé à la bordure */
+  margin: 2%; /* Pour qu'il y ait de l'espace entre les boutons même en affichage réduit */
+}
+
+.cta_gris {
+  transition: all 0.5s ease; /* Transition douce */
+  background: #D9D9D9;
+  padding: 2%;
+  margin: 2%; /* Pour qu'il y ait de l'espace entre les boutons même en affichage réduit */
+}
+
+.cta:hover, .cta_gris:hover {
+  background: #EF7270; /* Change la couleur des boutons au survol */
+}
+
+#Accueil_intro{
+  display: flex;
+  flex-wrap: nowrap; /* passe en wrap selon taille écran plus loin */
+  justify-content:space-around;
+  flex-direction: row;
+  max-width: 100%;
+  align-items: flex-start;
+  margin-left: 10%;
+  margin-right: 10%;
+  margin-bottom: 5%;
+}
+
+#synopsis{ /* Paragraphe présentation accueil */
+  margin-top: 4em;
+  width: 100%;
+  line-height: 1.875em; /* Espacement entre les lignes */
+  padding: 45px;
+  border: 4px solid #FAC379;
+}
+
+#Accueil_intro h2{
+  margin-top: 3em;
+}
+
+#nom_photo h1{
+  margin-bottom: 0.5em;
+  width: 7em;
+}
+
+#cta_accueil{
+  margin-top: 3.25em;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-items: center;
+  height: 6.25em;
+  min-width: 752px; /* Pour éviter qu'ils ne wrappent trop tôt et débordent sur "en apprendre plus sur". Passe en auto quand largeur écran inférieure à 1280px plus bas*/
+}
+
+#cta_apprendre{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+
+.apprendre{ /* Section "En apprendre plus..." */
+  background: #FAC379;
+  padding: 15px;
+  margin-top: 2em;
+  margin-bottom: 0.5em;
+}
+
+/* Accueil responsive */
+@media screen and (max-width: 1280px){ /* Pour tous les écrans, dès que la largeur est inférieure à 1280px */
+  #Accueil_intro{
+    flex-wrap: wrap; /* On enlève le menu version ordinateur */
+    margin-top: 70px;
+  }
+  #cta_accueil{
+    min-width: auto;
+  }
+}
+
+@media screen and (max-width: 940px){ /* Pour tous les écrans, dès que la largeur est inférieure à 940px */
+  .apprendre{
+    margin-top: 4em;
+  }
+}
+
+
+/* CONTACT */
+
+#titre_contact{
+  background: #EF7270;
+  border-radius: 0px 55px 0px 0px;
+  border-left:#000000 10px solid;
+  padding: 2%;
+  display: flex;
+  margin: auto;
+  justify-content: center;
+  width: 30%;
+  /* display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding: 2%;
+  margin: 2%;
+  width: 20%;
+  height: 20%; */
+}
+
+.flex-contact{
+  display: flex;
+  flex-wrap: nowrap; /* On autorise le wrap après selon taille écran */
+  justify-content: center;
+  align-items: center;
+  margin: 0 10% 2% 10%; /* Marges à gauche et droite de 10%, et en bas de 2%*/
+  gap: 35px;
+}
+
+.taille_icone img{
+  width: 15%;
+  height: 15%;
+}
+
+.taille_icone h3:nth-child(2) { /* Ajoute  de l'espace au dessus et en dessus de "mail", "adresse" et "téléphone" pour aérer*/
+  padding: 3% 0px;
+}
+
+@media screen and (max-width: 1030px){ /* Pour tous les écrans, dès que la largeur est inférieure à 1030px */
+  .flex-contact{
+    flex-wrap: wrap;
+  }
+  .taille_icone:nth-child(2){
+    margin: 3% 0px; /* Ajoute de l'espace au dessus et en dessous de la partie mail */
+  }
+}
+
+
+/* Compétences */
+.css, .html, .js, .vs, .canva, .prezi, .audacity, .psc1{
+  height: 3.5%;
+  width: 3.5%;
+}
+
+.office{
+  width: 3%;
+  height: 3%;
+}
+
+.figma{
+  width: 2.5%;
+  height: 2.5%;
+}
+
+.rstudio{
+  width: 10%;
+  height: 7%;
+}
+
+#langues_competences{
+  display: flex;
+  justify-content:space-between;
+  margin: 0% 2% 0% 2%;
+  border: black 1px solid
+
+}
+
+#competences_texte > li {
+  list-style-type: disc;
+}
+
+#langues_texte{
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  width: 35%;
+}
+
+#liste_competences{
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+  width: 65%;
+}
+
+
+
+
+
+
+/* #accueil_intro{
+  display: grid;
+  grid-template-rows: 10% 20% 50% 10%;
+  grid-template-columns: 30% 25% 45%;
+  grid-template-areas: 
+    "a . ."
+    ". c c"
+    "b d d"
+    "b e f";
+}
+
+#a { grid-area: a; }
+#b { grid-area: b; }
+#c { grid-area: c; }
+#d { grid-area: d; }
+#e { grid-area: e; }
+#f { grid-area: f; } 
+ */
+
+
+/* #accueil_intro {
+  display: grid;
+  grid-template-columns: (repeat(9), 1fr);
+  grid-template-rows: (repeat(12), 1fr);
+  grid-column-gap: 0px;
+  grid-row-gap: 0px;
+  grid-template-areas: 
+    "........."
+    ".aaa....."
+    "........."
+    ".....ccc."
+    "..b..ccc."
+    "..b......"
+    "..b..ddd."
+    "..b......"
+    "..b..e.f."
+    ".....e.f."
+  } */
+  
+
+/* #accueil_intro {
+display: grid;
+grid-template-columns: 4% 5% 18% 5% 3% 24% 3% 34% 4%;
+grid-template-rows: 7% 10% 2% 3% 4% 7% 25% repeat(4, 7%);
+grid-column-gap: 0px;
+grid-row-gap: 0px;
+height: 80%;
+}
+
+#a { grid-area: 2 / 2 / 3 / 5; }
+#b { grid-area: 5 / 3 / 10 / 4; }
+#c { grid-area: 4 / 6 / 6 / 9; }
+#d { grid-area: 7 / 6 / 8 / 9; }
+#e { grid-area: 9 / 6 / 11 / 7; }
+#f { grid-area: 9 / 8 / 11 / 9; } */
