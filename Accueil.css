@@ -1,9 +1,99 @@
 * {
     margin: 0; /* On enlève les marges par défaut */
+    max-width: 100%; /* On empeche des éléments de dépasser la largeur de la page */
   }
 
-  
-body {
+/* GLOBAL */
+
+body { /* On défini le fond de la page et la position du texte */
 background-color:#FDF5F4;
 text-align: center;
 }
+
+header { 
+  background: #FAC379; 
+  top: 0; /* Position du header, il commence tout en haut */
+  position: fixed; /* Il ne bougera pas pendant le scroll */
+  width: 100%; /* Il prend la largeur de la page */
+}
+
+ul{ /* Enlève pastille liste */
+  list-style: none;
+  padding-inline-start: 0px;
+}
+
+.vue_ordinateur { /* Barre menu */
+  display:flex; /* Flexbox */
+  flex-wrap: nowrap; /* Empêche les titres de section d'aller à la ligne */
+  justify-content: space-around; /* Réparti uniformément sur l'horizontale avec espaces aux extrémités */
+  align-items: center; 
+  /* On défini la police, la taille etc */
+  text-transform: uppercase;
+  font-family: 'Lato', sans-serif;
+  font-size: 1.5em;
+  font-weight: 400;
+}
+
+.container_header a { /* On retire les soulignements des liens du header et on les mets en noir */
+  color: #000000;
+  text-decoration: none;
+}
+
+.vue_ordinateur a:hover, #menu_mobile a:hover{ /* On souligne les titres du menu au survol */
+  text-decoration: underline;
+}
+
+#logo_mobile{ /* Logo mobile caché sauf si version mobile */
+  display: none;
+  margin: 0 auto;
+}
+
+/* Responsive header */
+#menu_droite_mobile{
+  display:none; /* On le cache par défaut, pour l'activer que en petit écran */
+  flex-direction: column;
+  align-items:center; 
+  /* On défini la police, la taille etc */
+  text-transform: uppercase;
+  font-family: 'Lato', sans-serif;
+  font-size: 1.5em;
+  font-weight: 400;
+}
+
+#ouvre_menu{ /* l'icone hamburger et le texte menu */
+  padding-top: 20px;
+  padding-bottom: 20px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+#ouvre_menu:after{ /* Pour placer l'icone trois traits à côté de MENU */
+  content: '\2630'; /* Code de l'icone hamburger */
+  padding-left: 50px; /* Faire de l'espace entre le texte et l'icone */
+}
+
+#menu_mobile li{ /* Pour espacer les titres du menu */
+padding-top: 20px;
+padding-bottom: 10px;
+}
+
+#menu_mobile{ /* Permet de l'afficher ou cacher avec le script js */
+  display: none;
+  flex-direction:column;
+  align-items:center;
+}
+
+@media screen and (max-width: 1280px){ /* Pour tous les écrans, dès que la largeur est inférieure à 1280px */
+  .vue_ordinateur{
+    display: none; /* On enlève le menu version ordinateur */
+  }
+  #menu_droite_mobile{
+    display: flex; /* On affiche le menu version mobile */
+  }
+  #logo_mobile{
+    display: block; /* On replace le logo */
+  }
+}
+
+
+/* ACCUEIL */
