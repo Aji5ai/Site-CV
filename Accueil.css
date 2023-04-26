@@ -26,7 +26,6 @@ h2 {
   font-size: 2.5em;
   font-weight: 400;
   color: #000000;
-  margin-bottom: 75px;
 }
 
 .h2_bleu {
@@ -72,6 +71,48 @@ p, .lato, #mail a {
   color: #000000;
   text-decoration: none;
 }
+
+.titre_section{ /* Créé un fond autour des titres de section */
+  border-radius: 0px 55px 0px 0px;
+  border-left:#000000 10px solid;
+  padding: 1%;
+  display: flex;
+  justify-content: center;
+  margin-left: 35%;
+  margin-right: 35%;
+  margin-bottom: 10%;
+}
+
+@media screen and (max-width: 1280px){ /* Pour tous les écrans, dès que la largeur est inférieure à 1280px */
+  .titre_section{
+    width: 40%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 10%;; 
+  }
+}
+
+@media screen and (max-width: 1000px){ /* Pour tous les écrans, dès que la largeur est inférieure à 1000px */
+  .titre_section{ /* le texte déborde du fond couleur sinon */
+    width: auto;
+    padding: 3%;
+    margin-left: 2%;
+    margin-right: 2%;
+    margin-bottom: 10%;
+  }
+  .h2_noir{
+  font-size: 2em; /* On réduit la taille des titres pour qu'ils rentrent mieux sur portable */
+  }
+}
+
+.section_rouge{ /* Fond rouge */
+  background: #EF7270;
+}
+
+.section_bleu{ /* Fond bleu */
+  background: #3AAAAF;
+}
+
 
 /* HEADER */
 header { 
@@ -121,8 +162,7 @@ ul{ /* Enlève pastille liste */
 }
 
 #ouvre_menu{ /* l'icone hamburger et le texte menu */
-  padding-top: 20px;
-  padding-bottom: 20px;
+  padding-bottom: 10px;
   font-weight: 600;
   cursor: pointer;
 }
@@ -159,6 +199,7 @@ padding-bottom: 10px;
 /* ACCUEIL */
 .sections_principales{
   padding-top: 120px; /* Pour que le header ne cache pas les sections après avoir cliqué sur les liens du menu */
+  padding-bottom: 100px;
 }
 
 .cta {
@@ -252,7 +293,7 @@ padding-bottom: 10px;
 
 /* CONTACT */
 
-#titre_contact{
+/* #titre_contact{
   background: #EF7270;
   border-radius: 0px 55px 0px 0px;
   border-left:#000000 10px solid;
@@ -261,15 +302,7 @@ padding-bottom: 10px;
   margin: auto;
   justify-content: center;
   width: 30%;
-  /* display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
-  padding: 2%;
-  margin: 2%;
-  width: 20%;
-  height: 20%; */
-}
+} */
 
 .flex-contact{
   display: flex;
@@ -324,28 +357,58 @@ padding-bottom: 10px;
   display: flex;
   justify-content:space-between;
   margin: 0% 2% 0% 2%;
-  border: black 1px solid
-
+  border: black 1px solid;
 }
 
-#competences_texte > li {
+#liste_competences li{
   list-style-type: disc;
 }
 
 #langues_texte{
   display: flex;
-  justify-content: center;
+  justify-content: start;
   flex-direction: column;
-  width: 35%;
+  line-height: 70px;
+  width: 45%;
+}
+
+#langues_texte > h3{
+  margin-bottom: 20px;
 }
 
 #liste_competences{
   display: flex;
   flex-direction: column;
   text-align: left;
-  width: 65%;
+  width: 75%;
+  line-height: 70px;
 }
 
+.test3 li div{
+  display: flex;
+  align-items: center;
+}
+
+.test3 img{
+  margin-left: 2%;
+}
+
+/* Competences responsive */
+
+
+
+/* #logos_1{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+} */
+
+/* #test3{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+} */
 
 
 
