@@ -232,11 +232,11 @@ padding-bottom: 10px;
   align-items: flex-start;
   margin-left: 10%;
   margin-right: 10%;
-  margin-bottom: 5%;
+  margin-bottom: 3%;
 }
 
 #synopsis{ /* Paragraphe présentation accueil */
-  margin-top: 4em;
+  margin-top: 2em;
   width: 100%;
   line-height: 1.875em; /* Espacement entre les lignes */
   padding: 45px;
@@ -244,7 +244,7 @@ padding-bottom: 10px;
 }
 
 #Accueil_intro h2{
-  margin-top: 3em;
+  margin-top: 8%;
 }
 
 #nom_photo h1{
@@ -253,12 +253,12 @@ padding-bottom: 10px;
 }
 
 #cta_accueil{
-  margin-top: 3.25em;
+  margin-top: 2%;
   display: flex;
   flex-wrap: wrap;
   justify-content: space-around;
   align-items: center;
-  height: 6.25em;
+  height: 5%;
   min-width: 752px; /* Pour éviter qu'ils ne wrappent trop tôt et débordent sur "en apprendre plus sur". Passe en auto quand largeur écran inférieure à 1280px plus bas*/
 }
 
@@ -272,8 +272,6 @@ padding-bottom: 10px;
 .apprendre{ /* Section "En apprendre plus..." */
   background: #FAC379;
   padding: 15px;
-  margin-top: 2em;
-  margin-bottom: 0.5em;
 }
 
 /* Accueil responsive */
@@ -328,7 +326,6 @@ padding-bottom: 10px;
   flex-wrap: nowrap;
   justify-content:center;
   margin: 0% 2% 0% 2%;
-  padding-top: 2%;
   padding-bottom: 2%;
   line-height: 70px;
 }
@@ -391,69 +388,143 @@ padding-bottom: 10px;
 /* EXPERIENCES */
 
 .box h3{
-  margin-bottom: 2%;
+  margin-bottom: 6%;
 }
 
 #a2017{
   display: flex;
   flex-wrap: nowrap;
   box-sizing:content-box;
-  margin: 5% 10% 0% 10%;
+  margin: 0% 13% 0% 13%;
   line-height: 50px;
-  border: #000000 solid 2px;
 }
 
-.une{
+.une, .trois, .cinq, .sept, .neuf{
   display: block;
-  justify-content: start;
-  align-items: end;
-  flex-direction: column;
   width: 100%;
 }
 
-.deux{
+.deux, .quatre, .six, .huit, .dix{
   display: block;
-  flex-direction: column;
-  text-align: center;
-  margin-left: 5%;
+  margin-left: 1%;
+  width: 100%;
 }
 
 #a2018{
   display: flex;
-  justify-content:space-around;
-  flex-direction: row;
-  align-items: flex-start;
-  margin: 10%;
-  border: 2px solid;
+  flex-wrap: nowrap;
+  box-sizing:content-box;
+  margin: 0% 13% 0% 13%;
+  line-height: 50px;
 }
 
 #a2019{
   display: flex;
-  justify-content:space-around;
-  flex-direction: row;
-  align-items: flex-start;
-  margin: 10%;
-  border: 2px solid;
+  flex-wrap: nowrap;
+  box-sizing:content-box;
+  margin: 0% 13% 0% 13%;
+  line-height: 50px;
 }
 
 #a2021{
   display: flex;
-  justify-content:space-around;
-  flex-direction: row;
-  align-items: flex-start;
-  margin: 10%;
-  border: 2px solid;
+  flex-wrap: nowrap;
+  box-sizing:content-box;
+  margin: 0% 13% 0% 13%;
+  line-height: 50px;
 }
 
 #a2022{
   display: flex;
-  justify-content:space-around;
-  flex-direction: row;
-  align-items: flex-start;
-  margin: 10%;
-  border: 2px solid;
+  flex-wrap: nowrap;
+  box-sizing:content-box;
+  margin: 0% 13% 0% 13%;
+  line-height: 50px;
 }
 
-.box{
-  border: 2px solid red;
+/* Experiences responsive */
+@media screen and (max-width: 1280px){ /* Pour tous les écrans, dès que la largeur est inférieure à 1280px */
+  .box h3{
+    margin-bottom: 3%;
+  }
+
+  #a2018, #a2021 {
+    flex-wrap: wrap;
+    margin: 0% 2% 0% 2%;
+  }
+  #a2017, #a2019, #a2022{
+    flex-wrap: wrap-reverse;
+    margin: 0% 2% 0% 2%;
+  }
+  .deux, .quatre, .six, .huit, .dix{
+    margin-left: auto;
+  }
+
+  .box p{
+    margin-bottom: 4%;
+  }
+}
+
+/* Timeline Container */
+.timeline {
+  margin: auto;
+}
+
+/* Card container */
+.card {
+  position: relative;
+  max-width: 100%;
+}
+
+/* setting padding based on even or odd */
+.card:nth-child(odd) {
+  padding: 30px 0 30px 30px;
+}
+.card:nth-child(even) {
+  padding: 30px 30px 30px 0;
+}
+/* Global ::before */
+.card::before {
+  content: "";
+  position: absolute;
+  width: 50%;
+  border: solid #EF7270;
+}
+
+/* Setting the border of top, bottom, left */
+.card:nth-child(odd)::before {
+  left: 0px;
+  top: -4.5px;
+  bottom: -4.5px;
+  border-width: 5px 0 5px 5px;
+  border-radius: 50px 0 0 50px;
+}
+
+/* Setting the top and bottom to "-5px" because earlier it was out of a pixel in mobile devices */
+@media only screen and (max-width: 1280px) {
+  .card:nth-child(odd)::before {
+    top: -5px;
+    bottom: -5px;
+  }
+}
+
+/* Setting the border of top, bottom, right */
+.card:nth-child(even)::before {
+  right: 0;
+  top: 0;
+  bottom: 0;
+  border-width: 5px 5px 5px 0;
+  border-radius: 0 50px 50px 0;
+}
+
+/* Removing the border if it is the first card */
+.card:first-child::before {
+  border-top: 0;
+  border-top-left-radius: 0;
+}
+
+/* Removing the border if it is the last card and it's odd */
+.card:last-child:nth-child(odd)::before {
+  border-bottom: 0;
+  border-bottom-left-radius: 0;
 }
