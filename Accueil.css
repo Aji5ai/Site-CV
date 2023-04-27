@@ -387,6 +387,10 @@ padding-bottom: 10px;
 
 /* EXPERIENCES */
 
+#grid_experiences_recent{
+  display: none;
+}
+
 .box h3{
   margin-bottom: 6%;
 }

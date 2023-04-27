@@ -8,3 +8,12 @@ else { // si il est caché, on l'affiche
     menuTexte.style.display = "flex";
 }
 }
+
+
+const experiences_ancien = document.getElementById("grid_experiences"); 
+const experiences_recent = document.getElementById("grid_experiences_recent"); 
+function triRecent() {
+    grid_experiences.display = "none"
+}
+
+
