@@ -1,7 +1,7 @@
 * {
     margin: 0; /* On enlève les marges par défaut */
-    max-width: 100%; /* On empeche des éléments de dépasser la largeur de la page */
     box-sizing: border-box; /* Pour pas que les éléments interne sà une boite n'en dépassent */
+    max-width: 100%; /* On empeche des éléments de dépasser la largeur de la page */  
   }
 
 /* GLOBAL */
@@ -142,6 +142,9 @@ ul{ /* Enlève pastille liste */
 
 .vue_ordinateur a:hover, #menu_mobile a:hover{ /* On souligne les titres du menu au survol */
   text-decoration: underline;
+  text-decoration-thickness: 6px; /* Le trait de soulignage est plus épais */
+  text-decoration-color: #096A89; /* Et bleu */
+
 }
 
 #logo_mobile{ /* Logo mobile caché sauf si version mobile */
@@ -293,17 +296,6 @@ padding-bottom: 10px;
 
 /* CONTACT */
 
-/* #titre_contact{
-  background: #EF7270;
-  border-radius: 0px 55px 0px 0px;
-  border-left:#000000 10px solid;
-  padding: 2%;
-  display: flex;
-  margin: auto;
-  justify-content: center;
-  width: 30%;
-} */
-
 .flex-contact{
   display: flex;
   flex-wrap: nowrap; /* On autorise le wrap après selon taille écran */
@@ -330,28 +322,6 @@ padding-bottom: 10px;
     margin: 3% 0px; /* Ajoute de l'espace au dessus et en dessous de la partie mail */
   }
 }
-
-
-/* Compétences */
-/* .css, .html, .js, .vs, .canva, .prezi, .audacity, .psc1{
-  height: 3.5%;
-  width: 3.5%;
-}
-
-.office{
-  width: 3%;
-  height: 3%;
-}
-
-.figma{
-  width: 2.5%;
-  height: 2.5%;
-}
-
-.rstudio{
-  width: 10%;
-  height: 7%;
-} */
 
 #langues_competences{
   display: flex;
@@ -417,75 +387,73 @@ padding-bottom: 10px;
 }
 
 
-/* #logos_1{
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-} */
 
-/* #test3{
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
-} */
+/* EXPERIENCES */
 
-
-
-
-
-/* #accueil_intro{
-  display: grid;
-  grid-template-rows: 10% 20% 50% 10%;
-  grid-template-columns: 30% 25% 45%;
-  grid-template-areas: 
-    "a . ."
-    ". c c"
-    "b d d"
-    "b e f";
+.box h3{
+  margin-bottom: 2%;
 }
 
-#a { grid-area: a; }
-#b { grid-area: b; }
-#c { grid-area: c; }
-#d { grid-area: d; }
-#e { grid-area: e; }
-#f { grid-area: f; } 
- */
-
-
-/* #accueil_intro {
-  display: grid;
-  grid-template-columns: (repeat(9), 1fr);
-  grid-template-rows: (repeat(12), 1fr);
-  grid-column-gap: 0px;
-  grid-row-gap: 0px;
-  grid-template-areas: 
-    "........."
-    ".aaa....."
-    "........."
-    ".....ccc."
-    "..b..ccc."
-    "..b......"
-    "..b..ddd."
-    "..b......"
-    "..b..e.f."
-    ".....e.f."
-  } */
-  
-
-/* #accueil_intro {
-display: grid;
-grid-template-columns: 4% 5% 18% 5% 3% 24% 3% 34% 4%;
-grid-template-rows: 7% 10% 2% 3% 4% 7% 25% repeat(4, 7%);
-grid-column-gap: 0px;
-grid-row-gap: 0px;
-height: 80%;
+#a2017{
+  display: flex;
+  flex-wrap: nowrap;
+  box-sizing:content-box;
+  margin: 5% 10% 0% 10%;
+  line-height: 50px;
+  border: #000000 solid 2px;
 }
 
-#a { grid-area: 2 / 2 / 3 / 5; }
-#b { grid-area: 5 / 3 / 10 / 4; }
-#c { grid-area: 4 / 6 / 6 / 9; }
-#d { grid-area: 7 / 6 / 8 / 9; }
-#e { grid-area: 9 / 6 / 11 / 7; }
-#f { grid-area: 9 / 8 / 11 / 9; } */
+.une{
+  display: block;
+  justify-content: start;
+  align-items: end;
+  flex-direction: column;
+  width: 100%;
+}
+
+.deux{
+  display: block;
+  flex-direction: column;
+  text-align: center;
+  margin-left: 5%;
+}
+
+#a2018{
+  display: flex;
+  justify-content:space-around;
+  flex-direction: row;
+  align-items: flex-start;
+  margin: 10%;
+  border: 2px solid;
+}
+
+#a2019{
+  display: flex;
+  justify-content:space-around;
+  flex-direction: row;
+  align-items: flex-start;
+  margin: 10%;
+  border: 2px solid;
+}
+
+#a2021{
+  display: flex;
+  justify-content:space-around;
+  flex-direction: row;
+  align-items: flex-start;
+  margin: 10%;
+  border: 2px solid;
+}
+
+#a2022{
+  display: flex;
+  justify-content:space-around;
+  flex-direction: row;
+  align-items: flex-start;
+  margin: 10%;
+  border: 2px solid;
+}
+
+.box{
+  border: 2px solid red;
+}
