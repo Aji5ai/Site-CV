@@ -54,12 +54,6 @@ p, .lato, #mail a {
   color: #000000;
 }
 
-#Frise{
-  font-size: 2em;
-  font-weight: 600;
-  color: #ffffff;
-}
-
 .lato_bold{
   font-family: 'Lato', sans-serif;
   font-size: 1.563em;
@@ -80,7 +74,7 @@ p, .lato, #mail a {
   justify-content: center;
   margin-left: 35%;
   margin-right: 35%;
-  margin-bottom: 10%;
+  margin-bottom: 7%;
 }
 
 @media screen and (max-width: 1280px){ /* Pour tous les écrans, dès que la largeur est inférieure à 1280px */
@@ -391,6 +385,17 @@ padding-bottom: 10px;
   margin-bottom: 6%;
 }
 
+#Frise{
+  font-size: 1.7em;
+  font-weight: 400;
+  color: #ffffff;
+  background: #096A89;
+  border-radius: 55px;
+  padding: 1.5%;
+  margin: auto auto 20px auto; /* Pour aligner au centre avec fit-content */
+  width: fit-content;
+}
+
 #a2017{
   display: flex;
   flex-wrap: nowrap;
@@ -465,6 +470,8 @@ padding-bottom: 10px;
   }
 }
 
+/* Timeline */
+
 /* Timeline Container */
 .timeline {
   margin: auto;
@@ -500,14 +507,6 @@ padding-bottom: 10px;
   border-radius: 50px 0 0 50px;
 }
 
-/* Setting the top and bottom to "-5px" because earlier it was out of a pixel in mobile devices */
-@media only screen and (max-width: 1280px) {
-  .card:nth-child(odd)::before {
-    top: -5px;
-    bottom: -5px;
-  }
-}
-
 /* Setting the border of top, bottom, right */
 .card:nth-child(even)::before {
   right: 0;
@@ -518,13 +517,177 @@ padding-bottom: 10px;
 }
 
 /* Removing the border if it is the first card */
-.card:first-child::before {
+/* .card:first-child::before {
   border-top: 0;
   border-top-left-radius: 0;
-}
+} */
 
 /* Removing the border if it is the last card and it's odd */
 .card:last-child:nth-child(odd)::before {
   border-bottom: 0;
   border-bottom-left-radius: 0;
+}
+
+/* Timeline repsonsive */
+/* Setting the top and bottom to "-5px" because it was out of a pixel in mobile devices */
+@media only screen and (max-width: 1280px) {
+  .card:nth-child(odd)::before {
+    top: -5px;
+    bottom: -5px;
+  }
+}
+
+/* FORMATION */
+#Projet_pro p{
+  display: flex;
+  justify-content: center;
+  margin: auto auto 3% auto;
+  border: 4px solid #EF7270;
+  padding: 2%;
+  width: 45%;
+  line-height: 1.875em;
+}
+
+#sous_section{
+  display: flex;
+  flex-wrap: nowrap;
+  margin: auto;
+}
+
+#Master p, #Cesure p, #Licence p{
+  display: flex;
+  align-items: center;
+  border: 4px solid #FAC379;
+  border-radius: 55px;
+  padding: 2%;
+  height: 80%;
+  font-size: 1.5625em;
+  line-height: 1.875em;
+  margin: 2%;
+} 
+
+.h3_bleu, p{
+  margin-bottom: 2%;
+}
+
+/* Formation responsive */
+@media screen and (max-width: 1289px){ /* Pour tous les écrans, dès que la largeur est inférieure à 1280px */
+  #Projet_pro p{
+    width: 75%;
+    margin-bottom: 5%;
+  }
+
+  #sous_section{
+    flex-wrap: wrap;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+  }
+
+  #Master p, #Cesure p, #Licence p{
+    width: 75%;
+    display: flex;
+    align-items: center;
+    margin: auto;
+  }
+
+  #Cesure{
+    margin-top: 3%;
+    margin-bottom: 3%;
+  }
+}
+
+
+/* LOISIRS */
+
+/* Bénévolat */
+#Benevolat_loisirs p{
+  display: inline-block;
+  border: 4px solid #EF7270;
+  padding: 40px;
+  width: 45%;
+  line-height: 1.875em;
+  margin-bottom: 2%;
+}
+
+/* Grid photos loisirs */
+.grid-loisirs{
+  display:grid;
+  grid-template-columns: 1fr 1.5fr 2fr 1.5fr 1fr;
+  gap: 15px;
+  margin: 0 10%;
+}
+
+.grid_loisirs_mobile{
+  display:none;
+  gap: 15px;
+  margin: auto;
+}
+
+
+.grid-loisirs img{
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+}
+
+.grid-contact{
+  display:grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  margin: 0 10%;
+  gap: 15px;
+}
+
+.photo-hover{
+  display: flex;
+  left: 0;
+  position:absolute;
+  text-align:center;
+  top: 30px;
+  width: 100%;
+  font-size: 1.5em;
+  color: red;
+  background-color: rgba(0, 0, 0, 0.7);
+}
+
+.lien-conteneur-photo img{
+  position: relative;
+}
+
+/* Benevolat responsive */
+@media screen and (max-width: 1289px){ /* Pour tous les écrans, dès que la largeur est inférieure à 1280px */
+  #Benevolat_loisirs p{
+    width: 75%;
+  }
+  .grid-loisirs {
+    display: none;
+  }
+
+  .grid_loisirs_mobile {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  .grid_loisirs_mobile div {
+    display: block;
+  }
+  
+  #un, #cinq{
+    width: 10%;
+  }
+
+  #deux, #quatre{
+    width: 15%;
+  }
+
+  #trois{
+    width: 20%;
+  }
+
+  .grid_loisirs_mobile div img {
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+}
 }
