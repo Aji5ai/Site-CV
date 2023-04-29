@@ -343,7 +343,7 @@ padding-bottom: 10px;
   display: flex;
   flex-direction: column;
   text-align: left;
-  width: 75%;
+  width: 55%;
 }
 
 .test3 li div{
@@ -391,7 +391,7 @@ padding-bottom: 10px;
   color: #ffffff;
   background: #096A89;
   border-radius: 55px;
-  padding: 1.5%;
+  padding: 0.5% 1.5%;
   margin: auto auto 20px auto; /* Pour aligner au centre avec fit-content */
   width: fit-content;
 }
@@ -596,12 +596,14 @@ padding-bottom: 10px;
     margin-top: 3%;
     margin-bottom: 3%;
   }
+  #Formation .h3_bleu{
+    margin-top: 6%;
+    margin-bottom: 6%;
+  }
 }
-
 
 /* LOISIRS */
 
-/* Bénévolat */
 #Benevolat_loisirs p{
   display: inline-block;
   border: 4px solid #EF7270;
@@ -611,83 +613,44 @@ padding-bottom: 10px;
   margin-bottom: 2%;
 }
 
-/* Grid photos loisirs */
-.grid-loisirs{
-  display:grid;
-  grid-template-columns: 1fr 1.5fr 2fr 1.5fr 1fr;
-  gap: 15px;
-  margin: 0 10%;
-}
-
-.grid_loisirs_mobile{
-  display:none;
+.grid-loisirs {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
   gap: 15px;
   margin: auto;
 }
 
-
 .grid-loisirs img{
   object-fit: cover;
   width: 100%;
-  height: 100%;
+  height: 300px;
 }
 
-.grid-contact{
-  display:grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  margin: 0 10%;
-  gap: 15px;
+.grid-loisirs a{
+  text-decoration: none;
+  font-size: 1.2em;
+  font-weight: 400;
+  color: #000000;
 }
 
 .photo-hover{
-  display: flex;
-  left: 0;
-  position:absolute;
-  text-align:center;
-  top: 30px;
-  width: 100%;
-  font-size: 1.5em;
-  color: red;
-  background-color: rgba(0, 0, 0, 0.7);
+  display: none;
 }
 
-.lien-conteneur-photo img{
-  position: relative;
-}
 
-/* Benevolat responsive */
+/* Bénévolat responsive */
 @media screen and (max-width: 1289px){ /* Pour tous les écrans, dès que la largeur est inférieure à 1280px */
   #Benevolat_loisirs p{
     width: 75%;
   }
-  .grid-loisirs {
-    display: none;
+  #Benevolat_loisirs .h3_bleu{
+    margin-top: 6%;
+    margin-bottom: 6%;
   }
-
-  .grid_loisirs_mobile {
-    display: flex;
-    flex-wrap: wrap;
+  .photo-hover{
+    display:flex;
     justify-content: center;
   }
-  .grid_loisirs_mobile div {
-    display: block;
-  }
-  
-  #un, #cinq{
-    width: 10%;
-  }
-
-  #deux, #quatre{
-    width: 15%;
-  }
-
-  #trois{
-    width: 20%;
-  }
-
-  .grid_loisirs_mobile div img {
-    object-fit: cover;
-    width: 100%;
-    height: 100%;
-}
 }
