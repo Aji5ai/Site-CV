@@ -1,0 +1,157 @@
+/* EXPERIENCES */
+  #frise{
+    font-size: 1.7em;
+    font-weight: 400;
+    color: #ffffff;
+    background: #096A89;
+    border-radius: 55px;
+    padding: 0.5% 1.5%;
+    margin: auto auto 20px auto; /* Pour aligner au centre avec fit-content */
+    width: fit-content;
+  }
+  
+.box h3{
+    margin-bottom: 6%;
+  }
+  
+
+  #a2017{
+    display: flex;
+    flex-wrap: nowrap;
+    box-sizing:content-box;
+    margin: 0% 13% 0% 13%;
+    line-height: 50px;
+  }
+  
+  .une, .trois, .cinq, .sept, .neuf{
+    display: block;
+    width: 100%;
+  }
+  
+  .deux, .quatre, .six, .huit, .dix{
+    display: block;
+    margin-left: 1%;
+    width: 100%;
+  }
+  
+  #a2018{
+    display: flex;
+    flex-wrap: nowrap;
+    box-sizing:content-box;
+    margin: 0% 13% 0% 13%;
+    line-height: 50px;
+  }
+  
+  #a2019{
+    display: flex;
+    flex-wrap: nowrap;
+    box-sizing:content-box;
+    margin: 0% 13% 0% 13%;
+    line-height: 50px;
+  }
+  
+  #a2021{
+    display: flex;
+    flex-wrap: nowrap;
+    box-sizing:content-box;
+    margin: 0% 13% 0% 13%;
+    line-height: 50px;
+  }
+  
+  #a2022{
+    display: flex;
+    flex-wrap: nowrap;
+    box-sizing:content-box;
+    margin: 0% 13% 0% 13%;
+    line-height: 50px;
+  }
+  
+  /* Experiences responsive */
+  @media screen and (max-width: 1280px){ /* Pour tous les écrans, dès que la largeur est inférieure à 1280px */
+    .box h3{
+      margin-bottom: 3%;
+    }
+  
+    #a2018, #a2021 {
+      flex-wrap: wrap;
+      margin: 0% 2% 0% 2%;
+    }
+    #a2017, #a2019, #a2022{
+      flex-wrap: wrap-reverse;
+      margin: 0% 2% 0% 2%;
+    }
+    .deux, .quatre, .six, .huit, .dix{
+      margin-left: auto;
+    }
+  
+    .box p{
+      margin-bottom: 4%;
+    }
+  }
+  
+  /* Timeline */
+  
+  /* Timeline Container */
+  .timeline {
+    margin: auto;
+  }
+  
+  /* Card container */
+  .card {
+    position: relative;
+    max-width: 100%;
+  }
+  
+  /* setting padding based on even or odd */
+  .card:nth-child(odd) {
+    padding: 30px 0 30px 30px;
+  }
+  .card:nth-child(even) {
+    padding: 30px 30px 30px 0;
+  }
+  /* Global ::before */
+  .card::before {
+    content: "";
+    position: absolute;
+    width: 50%;
+    border: solid #EF7270;
+  }
+  
+  /* Setting the border of top, bottom, left */
+  .card:nth-child(odd)::before {
+    left: 0px;
+    top: -4.5px;
+    bottom: -4.5px;
+    border-width: 5px 0 5px 5px;
+    border-radius: 50px 0 0 50px;
+  }
+  
+  /* Setting the border of top, bottom, right */
+  .card:nth-child(even)::before {
+    right: 0;
+    top: 0;
+    bottom: 0;
+    border-width: 5px 5px 5px 0;
+    border-radius: 0 50px 50px 0;
+  }
+  
+  /* Removing the border if it is the first card */
+  /* .card:first-child::before {
+    border-top: 0;
+    border-top-left-radius: 0;
+  } */
+  
+  /* Removing the border if it is the last card and it's odd */
+  .card:last-child:nth-child(odd)::before {
+    border-bottom: 0;
+    border-bottom-left-radius: 0;
+  }
+  
+  /* Timeline repsonsive */
+  /* Setting the top and bottom to "-5px" because it was out of a pixel in mobile devices */
+  @media only screen and (max-width: 1280px) {
+    .card:nth-child(odd)::before {
+      top: -5px;
+      bottom: -5px;
+    }
+  }

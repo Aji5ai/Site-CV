@@ -1,0 +1,59 @@
+/* COMPETENCES */
+
+#langues_competences{ /* contient langues et la liste des comptences */
+    display: flex;
+    flex-wrap: nowrap; /* empeche wrap pour autoriser plus loin selon taille ecran */
+    justify-content:center;
+    margin: 0% 2% 0% 2%; /* marges à droite et à gauche */
+    padding-bottom: 2%;
+    line-height: 70px; /* pour aérer les lignes */
+  }
+
+  #langues_texte{
+    display: flex;
+    flex-direction: column; /* va en ligne par défaut */
+    width: 45%; /* pour répartir sur l'horizontale avec la liste des compétences */
+  }
+  
+  #langues_texte h3{
+    margin-bottom: 2%;
+  }
+  
+  #liste_competences{
+    display: flex;
+    flex-direction: column;
+    width: 55%; /* pour répartir sur l'horizontale avec les langues */
+  }
+
+  #liste_competences li{
+    list-style-type: disc; /* On affiche les pastilles (car enlevées globalement sur la page) */
+  }
+
+  .ligne_competence div{
+    display: flex;
+  }
+  
+  .ligne_competence img{ /* Espace les logos */
+    margin-left: 2%;
+  }
+  
+  #liste_competences_mobile{ /* caché en version ordinateur */
+    display: none;
+  }
+  
+  /* Competences responsive */
+  @media screen and (max-width: 1460px){ /* Pour tous les écrans, dès que la largeur est inférieure à 1460px */
+    #liste_competences{
+      display: none; /* cache la version ordinateur */
+    }
+  
+    #liste_competences_mobile{
+      display: flex;
+      margin-bottom: 10%; /* pour espacer avant les langues en version mobile */
+    }
+  
+    #langues_competences{
+      flex-wrap: wrap-reverse; /* on affiche les langues en deuxieme pour améliorer la compréhension de la section */
+      line-height: auto;
+    }
+  }

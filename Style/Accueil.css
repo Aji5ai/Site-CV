@@ -1,0 +1,86 @@
+/* ACCUEIL */
+.sections_principales{
+    padding-top: 120px; /* Pour que le header ne cache pas les sections après avoir cliqué sur les liens du menu */
+  }
+  
+#accueil_intro{
+  display: flex;
+  flex-wrap: nowrap; /* passe en wrap selon taille écran plus loin */
+  justify-content:space-around; /* utile en version mobile */
+  margin-left: 10%;
+  margin-right: 10%;
+  margin-bottom: 3%;
+}
+
+#synopsis{ /* Paragraphe présentation accueil */
+  margin-top: 3%;
+  line-height: 40px; /* Espacement entre les lignes */
+  padding: 30px;
+  border: 4px solid #FAC379;
+}
+
+#accueil_intro h2{
+  margin-top: 8%;
+}
+
+#nom_photo h1{
+  margin-bottom: 8%;
+  width: 7em;
+}
+
+#cta_accueil{
+  margin-top: 2%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  min-width: 752px; /* Pour éviter qu'ils ne wrappent trop tôt et débordent sur "en apprendre plus sur". Passe en auto quand largeur écran inférieure à 1280px plus bas*/
+}
+
+.cta_bleu {
+  transition: all 0.5s ease; /* Transition douce */
+  background: #3AAAAF;
+  padding: 3%; /* Pour que le texte ne soit pas collé à la bordure */
+  margin: 2%; /* Pour qu'il y ait de l'espace entre les boutons même en affichage réduit */
+}
+
+.cta_gris {
+  transition: all 0.5s ease; /* Transition douce */
+  background: #D9D9D9;
+  padding: 2%;
+  margin: 2%; /* Pour qu'il y ait de l'espace entre les boutons même en affichage réduit */
+}
+
+.cta_bleu:hover, .cta_gris:hover {
+  background: #EF7270; /* Change la couleur des boutons au survol */
+}
+
+.apprendre{ /* Section "En apprendre plus..." */
+  background: #FAC379;
+  padding: 15px;
+}
+
+#cta_apprendre{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+
+
+/* Accueil responsive */
+@media screen and (max-width: 1280px){ /* Pour tous les écrans, dès que la largeur est inférieure à 1280px */
+  #accueil_intro{
+    flex-wrap: wrap; /* En vue portable les éléments se wrappent en colonne */
+    margin-top: 70px; /* Pour ajouter de l'espace entre le menu mobile et le titre */
+  }
+
+  #cta_accueil{
+    min-width: auto; /* permet de centrer les boutons */
+  }
+}
+
+@media screen and (max-width: 940px){ /* Pour tous les écrans, dès que la largeur est inférieure à 940px */
+  .apprendre{
+    margin-top: 20%;
+  }
+}

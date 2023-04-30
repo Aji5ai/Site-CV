@@ -8,4 +8,3 @@ else { // si il est caché, on l'affiche
     menuTexte.style.display = "flex";
 }
 }
-

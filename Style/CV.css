@@ -1,0 +1,171 @@
+* {
+    margin: 0; /* On enlève les marges par défaut */
+    box-sizing: border-box; /* Pour pas que les éléments internes à une boite n'en dépassent */
+    max-width: 100%; /* On empeche des éléments de dépasser la largeur de la page */  
+  }
+
+/* GLOBAL */
+
+.container_header a, #accueil a { /* On retire les soulignements des liens du header et des cta de l'accueil et on les mets en noir */
+  color: #000000;
+  text-decoration: none;
+}
+
+body { /* On défini le fond de la page et la position du texte */
+background-color:#FDF5F4;
+text-align: center;
+font-family: 'League Spartan', sans-serif;
+font-weight: 400;
+}
+
+h1 {
+  font-size: 4em;
+  font-weight: 400;
+  color: #096A89;
+}
+  
+h2, .container_header{ /* Passe tous les titres h2 et header en majuscules */
+  text-transform: uppercase;
+}
+
+.titre{
+  font-weight: 400;
+  font-size: 2em;
+}
+
+.bleu{
+  color: #096A89;
+}
+
+.noir{
+  color: #000000;
+}
+
+.bold{
+  font-weight: 700;
+}
+
+p, .lato, #mail a { /* lien mail formaté */
+  font-family: 'Lato', sans-serif;
+  font-size: 1.5625em;
+  font-style: normal;
+  color: #000000;
+}
+
+.titre_section{ /* Créé un fond autour des titres de section */
+  border-radius: 0px 55px 0px 0px;
+  border-left:#000000 10px solid;
+  display: flex;
+  justify-content: center; 
+  padding: 1%;
+  margin-left: 35%;
+  margin-right: 35%;
+  margin-bottom: 7%;
+}
+
+/* Global responsive */
+
+@media screen and (max-width: 1280px){ /* Pour tous les écrans, dès que la largeur est inférieure à 1280px */
+  .titre_section{
+    width: 40%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 10%;; 
+  }
+}
+
+@media screen and (max-width: 1000px){ /* Pour tous les écrans, dès que la largeur est inférieure à 1000px */
+  .titre_section{ /* le texte déborde du fond couleur sinon */
+    width: auto;
+    padding: 3%;
+    margin-left: 2%;
+    margin-right: 2%;
+    margin-bottom: 10%;
+  }
+}
+
+.fond_rouge{ /* Fond rouge pour les titres de sections*/
+  background: #EF7270;
+}
+
+.fond_bleu{ /* Fond bleu pour les titres de sections*/
+  background: #3AAAAF;
+}
+
+
+
+/* HEADER */
+header { 
+  background: #FAC379; 
+  top: 0; /* Position du header, il commence tout en haut */
+  position: fixed; /* Il ne bougera pas pendant le scroll */
+  width: 100%; /* Il prend la largeur de la page */
+  z-index: 1; /* Pour éviter que des éléments se superposent */
+}
+
+ul { /* Enlève pastille de toutes les listes */
+  list-style: none;
+  padding-inline-start: 0px;
+}
+
+.container_header{
+  /* On défini la police, la taille etc */
+  font-family: 'Lato', sans-serif;
+  font-size: 1.5em;
+}
+
+.vue_ordinateur { /* Barre menu */
+  display:flex; /* Flexbox */
+  flex-wrap: nowrap; /* Empêche les titres de section d'aller à la ligne */
+  justify-content: space-around; /* Réparti uniformément sur l'horizontale avec espaces aux extrémités */
+  align-items: center; /* Centre sur l'axe vertical */
+}
+
+.container_header a:hover{ /* On souligne les titres du menu au survol */
+  text-decoration: underline;
+  text-decoration-thickness: 6px; /* Le trait de soulignage est plus épais */
+  text-decoration-color: #096A89; /* Et bleu */
+}
+
+#logo_mobile{ /* Logo mobile caché sauf si version mobile */
+  display: none;
+}
+
+/* Responsive header */
+#menu_droite_mobile{
+  display:none; /* On le cache par défaut, pour l'activer que en petit écran */
+  flex-direction: column;
+}
+
+#ouvre_menu{ /* l'icone hamburger et le texte menu */
+  padding-bottom: 10px;
+  font-weight: 600;
+  cursor: pointer; /* Pour montrer que c'est cliquable au survol */
+}
+
+#ouvre_menu:after{ /* Pour placer l'icone trois traits à côté de MENU */
+  content: '\2630'; /* Code de l'icone hamburger */
+  padding-left: 50px; /* Faire de l'espace entre le texte et l'icone */
+}
+
+#menu_mobile li{ /* Pour espacer les titres du menu */
+padding-top: 20px;
+padding-bottom: 10px;
+}
+
+#menu_mobile{ /* Permet de l'afficher ou cacher avec le script js */
+  display: none;
+  flex-direction:column;
+}
+
+@media screen and (max-width: 1280px){ /* Pour tous les écrans, dès que la largeur est inférieure à 1280px */
+  .vue_ordinateur{
+    display: none; /* On enlève le menu version ordinateur */
+  }
+  #menu_droite_mobile{
+    display: flex; /* On affiche le menu version mobile */
+  }
+  #logo_mobile{
+    display: block; /* On replace le logo */
+  }
+}

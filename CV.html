@@ -6,7 +6,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>CV Apolline Ponce</title>
     <!-- Liens aux fichiers css -->
-    <link rel="stylesheet" href="Accueil.css">
+    <link rel="stylesheet" href="Style/CV.css">
+    <link rel="stylesheet" href="Style/Accueil.css">
+    <link rel="stylesheet" href="Style/Contact.css">
+    <link rel="stylesheet" href="Style/Competences.css">
+    <link rel="stylesheet" href="Style/Experiences.css">
+    <link rel="stylesheet" href="Style/Formation.css">
+    <link rel="stylesheet" href="Style/Benevolat_loisirs.css">
+
     <!-- Liens pour les polices d'écriture google -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -17,6 +24,7 @@
 <body>
     <header>
         <nav>
+            <!-- Version pour ordinateur -->
             <div>
                 <ul class="container_header vue_ordinateur">
                     <li><img src="Images-icons-logos/logo_AP.svg" alt="Logo Apolline Ponce" width="80px" height="80px"/></li>
@@ -28,13 +36,14 @@
                     <li><a href="#benevolat_loisirs">Bénévolat et loisirs</a></li>
                 </ul>
             </div>
-            <div class="container_header vue_mobile">
+            <!-- Version pour mobile -->
+            <div class="container_header">
                 <div id="logo_mobile">
                     <img src="Images-icons-logos/logo_AP.svg" alt="Logo Apolline Ponce" width="80px" height="80px"/>
                 </div>
                 <div id="menu_droite_mobile">
                     <div id="ouvre_menu" onclick="toggleMenu()">Menu</div>
-                    <ul id="menu_mobile">
+                    <ul id="menu_mobile"> <!-- ToggleMenu partout pour le cacher une fois cliqué sur un des liens -->
                         <li><a href="#accueil" onclick="toggleMenu()">Accueil</a></li>
                         <li><a href="#contact" onclick="toggleMenu()">Contact</a></li>
                         <li><a href="#competences" onclick="toggleMenu()">Compétences</a></li>
@@ -47,7 +56,8 @@
         </nav>
     </header>
     
-    <script src="Accueil.js"></script>   
+    <!-- Script JS appellé ici -->
+    <script src="CV.js"></script>   
 
     <main>
         <section id="accueil" class="sections_principales">
@@ -63,8 +73,8 @@
                                 <p>Suite à un bac+5 dans l'environnement, je suis à la recherche d'une <strong>alternance</strong> qui me permettra d'acquérir les qualifications nécessaires pour accéder à un emploi dans le développement d'applications.</p>
                             </div>
                             <div id="cta_accueil">
-                            <a href="#contact" class="lato bold cta">CONTACTEZ-MOI</a> 
-                            <a href="#competences" class="lato bold cta">DÉCOUVREZ MES COMPÉTENCES</a> 
+                                <a href="#contact" class="lato bold cta_bleu">CONTACTEZ-MOI</a> 
+                                <a href="#competences" class="lato bold cta_bleu">DÉCOUVREZ MES COMPÉTENCES</a> 
                             </div>
                         </div>
                     </div>
@@ -78,11 +88,12 @@
                     </div>
                 </div>
         </section>
+
         <section id="contact" class="sections_principales">
-                <div class="titre_section section_rouge">
+                <div class="titre_section fond_rouge">
                     <h2 class="titre h2 noir">Contactez-moi</h2>
                 </div>
-                <div class="flex-contact">
+                <div class="flex_contact">
                     <div class="taille_icone">
                         <img src="Images-icons-logos/position.svg" alt="Icône adresse"/>
                         <h3 class="titre h3 noir">Adresse</h3>
@@ -93,15 +104,16 @@
                         <h3 class="titre h3 noir">Mail</h3>
                         <a href="mailto:apolline.ponce@outlook.fr">apolline.ponce@outlook.fr</a>
                     </div>
-                    <div id="telephone" class="taille_icone">
+                    <div class="taille_icone">
                         <img src="Images-icons-logos/telephone.svg" alt="Icône téléphone"/>
                         <h3 class="titre h3 noir">Téléphone</h3>
                         <p>06 52 02 66 82</p>
                     </div>
                 </div>
         </section>
+
         <section id="competences" class="sections_principales">
-            <div class="titre_section section_bleu">
+            <div class="titre_section fond_bleu">
                 <h2 class="titre h2 noir">Mes compétences</h2>
             </div>
             <div id="langues_competences">
@@ -111,9 +123,10 @@
                     <p>Espagnol A2</p>
                     <p>Japonais A2</p>
                 </div>
+                <!-- Version pour ordinateur -->
                 <div id="liste_competences">
-                    <ul class="lato" id="competences_texte">
-                        <div class="test3">
+                    <ul class="lato">
+                        <div class="ligne_competence">
                             <li>
                                 <div> 
                                     Notions de base dans l'HTML, CSS et JavaScript 
@@ -124,7 +137,7 @@
                                 </div>
                             </li>
                         </div>
-                        <div class="test3">
+                        <div class="ligne_competence">
                             <li>
                                 <div>
                                     PAO : Canva, Prezi. Maîtrise Pack Office, Figma
@@ -135,7 +148,7 @@
                                 </div>
                             </li>
                         </div>
-                        <div class="test3">
+                        <div class="ligne_competence">
                             <li>
                                 <div>
                                     Analyses unies et multivariées (Notions Rstudio)
@@ -143,7 +156,7 @@
                                 </div>
                             </li>
                         </div>
-                        <div class="test3">
+                        <div class="ligne_competence">
                             <li>
                                 <div>
                                     Logiciels vidéo, son et image (Open shot, Audacity, GIMP)
@@ -151,7 +164,7 @@
                                 </div>
                             </li>
                         </div>
-                        <div class="test3">
+                        <div class="ligne_competence">
                             <li>
                                 <div>
                                     Prévention et secours civiques de niveau 1
@@ -161,60 +174,62 @@
                         </div>
                     </ul>
                 </div>
+                <!-- Version pour mobile -->
                 <div id="liste_competences_mobile">
-                    <div class="lato" id="competences_texte_mobile">
-                        <div class="test3_mobile">
-                                <div> 
-                                    Notions de base dans l'HTML, CSS et JavaScript 
-                                </div>
-                                <div>
-                                    <img src="Images-icons-logos/css_px.svg" alt="Icône CSS">
-                                    <img src="Images-icons-logos/html_px.svg" alt="Icône HTML">
-                                    <img src="Images-icons-logos/js_px.svg" alt="Icône Javascript">
-                                    <img src="Images-icons-logos/visual-studio_px.svg" alt="Icône Visual Studio Code"> 
-                                </div>
+                    <div class="lato">
+                        <div class="ligne_competence_mobile">
+                            <div> 
+                                Notions de base dans l'HTML, CSS et JavaScript 
+                            </div>
+                            <div>
+                                <img src="Images-icons-logos/css_px.svg" alt="Icône CSS">
+                                <img src="Images-icons-logos/html_px.svg" alt="Icône HTML">
+                                <img src="Images-icons-logos/js_px.svg" alt="Icône Javascript">
+                                <img src="Images-icons-logos/visual-studio_px.svg" alt="Icône Visual Studio Code"> 
+                            </div>
                         </div>
-                        <div class="test3_mobile">
-                                <div>
-                                    PAO : Canva, Prezi. Maîtrise Pack Office, Figma
-                                </div>
-                                <div>
-                                    <img src="Images-icons-logos/canva_px.svg" alt="Icône Canva">
-                                    <img src="Images-icons-logos/prezi_px.svg" alt="Icône Prezi">
-                                    <img src="Images-icons-logos/office_px.svg" alt="Icône Office">
-                                    <img src="Images-icons-logos/Figma_px.svg" alt="Icône Figma">
-                                </div>
+                        <div class="ligne_competence_mobile">
+                            <div>
+                                PAO : Canva, Prezi. Maîtrise Pack Office, Figma
+                            </div>
+                            <div>
+                                <img src="Images-icons-logos/canva_px.svg" alt="Icône Canva">
+                                <img src="Images-icons-logos/prezi_px.svg" alt="Icône Prezi">
+                                <img src="Images-icons-logos/office_px.svg" alt="Icône Office">
+                                <img src="Images-icons-logos/Figma_px.svg" alt="Icône Figma">
+                            </div>
                         </div>
-                        <div class="test3_mobile">
-                                <div>
-                                    Analyses unies et multivariées (Notions Rstudio)
-                                </div>
-                                <div>
-                                    <img src="Images-icons-logos/Rstudio_px.svg" alt="Icône Rstudio">
-                                </div>
+                        <div class="ligne_competence_mobile">
+                            <div>
+                                Analyses unies et multivariées (Notions Rstudio)
+                            </div>
+                            <div>
+                                <img src="Images-icons-logos/Rstudio_px.svg" alt="Icône Rstudio">
+                            </div>
                         </div>
-                        <div class="test3_mobile">
-                                <div>
-                                    Logiciels vidéo, son et image (Open shot, Audacity, GIMP)
-                                </div>
-                                <div>
-                                    <img src="Images-icons-logos/audacity_px.svg" alt="Icône Audacity">
-                                </div>
+                        <div class="ligne_competence_mobile">
+                            <div>
+                                Logiciels vidéo, son et image (Open shot, Audacity, GIMP)
+                            </div>
+                            <div>
+                                <img src="Images-icons-logos/audacity_px.svg" alt="Icône Audacity">
+                            </div>
                         </div>
-                        <div class="test3_mobile">
-                                <div>
-                                    Prévention et secours civiques de niveau 1
-                                </div>
-                                <div>
-                                    <img src="Images-icons-logos/psc1_px.svg" alt="Icône Premiers Secours">
-                                </div>
+                        <div class="ligne_competence_mobile">
+                            <div>
+                                Prévention et secours civiques de niveau 1
+                            </div>
+                            <div>
+                                <img src="Images-icons-logos/psc1_px.svg" alt="Icône Premiers Secours">
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
         </section>
+        
         <section id="experiences" class="sections_principales">
-            <div class="titre_section section_rouge">
+            <div class="titre_section fond_rouge">
                 <h2 class="titre h2 noir">Mes expériences professionnelles</h2>
             </div>
             <div>
@@ -283,7 +298,7 @@
         </section>
 
         <section id="formation" class="sections_principales">
-            <div class="titre_section section_bleu">
+            <div class="titre_section fond_bleu">
                 <h2 class="titre h2 noir">Formation</h2>
             </div>
             <div id="projet_pro">
@@ -307,7 +322,7 @@
         </section>
 
         <section id="benevolat_loisirs" class="sections_principales">
-            <div class="titre_section section_rouge">
+            <div class="titre_section fond_rouge">
                 <h2 class="titre h2 noir">Bénévolat et loisirs</h2>
             </div>
             <div>
