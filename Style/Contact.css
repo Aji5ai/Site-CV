@@ -1,28 +1,28 @@
 /* CONTACT */
 
 .flex_contact{
-    display: flex;
-    flex-wrap: nowrap; /* On autorise le wrap après selon taille écran */
-    justify-content: center; /* pour centrer sur mobile */
-    align-items: center;
-    margin: 0 10% 2% 10%; /* Marges à gauche et droite de 10%, et en bas de 2%*/
-    gap: 35px;
-  }
+  display: flex;
+  flex-wrap: nowrap; /* On autorise le wrap après selon taille écran */
+  justify-content: center; /* pour centrer sur mobile */
+  align-items: center;
+  margin: 0 10% 2% 10%; /* Marges à gauche et droite de 10%, et en bas de 2%*/
+  gap: 35px;
+}
   
-  .taille_icone img{
-    width: 15%;
-    height: 15%;
+.taille_icone img{
+  width: 15%;
+  height: 15%;
+}
+
+.taille_icone h3:nth-child(2) { /* Ajoute  de l'espace au dessus et en dessus de "mail", "adresse" et "téléphone" pour aérer*/
+  padding: 3% 0px;
+}
+
+@media screen and (max-width: 1030px){ /* Pour tous les écrans, dès que la largeur est inférieure à 1030px */
+  .flex_contact{
+    flex-wrap: wrap;
   }
-  
-  .taille_icone h3:nth-child(2) { /* Ajoute  de l'espace au dessus et en dessus de "mail", "adresse" et "téléphone" pour aérer*/
-    padding: 3% 0px;
+  .taille_icone:nth-child(2){
+    margin: 3% 0px; /* Ajoute de l'espace au dessus et en dessous de la partie mail */
   }
-  
-  @media screen and (max-width: 1030px){ /* Pour tous les écrans, dès que la largeur est inférieure à 1030px */
-    .flex_contact{
-      flex-wrap: wrap;
-    }
-    .taille_icone:nth-child(2){
-      margin: 3% 0px; /* Ajoute de l'espace au dessus et en dessous de la partie mail */
-    }
-  }
+}

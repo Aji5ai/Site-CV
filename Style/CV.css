@@ -1,10 +1,10 @@
+/* GLOBAL */
+
 * {
     margin: 0; /* On enlève les marges par défaut */
     box-sizing: border-box; /* Pour pas que les éléments internes à une boite n'en dépassent */
     max-width: 100%; /* On empeche des éléments de dépasser la largeur de la page */  
-  }
-
-/* GLOBAL */
+}
 
 .container_header a, #accueil a { /* On retire les soulignements des liens du header et des cta de l'accueil et on les mets en noir */
   color: #000000;
@@ -12,10 +12,10 @@
 }
 
 body { /* On défini le fond de la page et la position du texte */
-background-color:#FDF5F4;
-text-align: center;
-font-family: 'League Spartan', sans-serif;
-font-weight: 400;
+  background-color:#FDF5F4;
+  text-align: center;
+  font-family: 'League Spartan', sans-serif;
+  font-weight: 400;
 }
 
 h1 {
@@ -60,7 +60,7 @@ p, .lato, #mail a { /* lien mail formaté */
   padding: 1%;
   margin-left: 35%;
   margin-right: 35%;
-  margin-bottom: 7%;
+  margin-bottom: 5%;
 }
 
 /* Global responsive */
