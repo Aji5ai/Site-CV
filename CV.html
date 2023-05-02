@@ -27,7 +27,9 @@
             <!-- Version pour ordinateur -->
             <div>
                 <ul class="container_header vue_ordinateur">
-                    <li><img src="Images-icons-logos/logo_AP.svg" alt="Logo Apolline Ponce" width="80px" height="80px"/></li>
+                    <li>
+                        <a href="#accueil"><img src="Images-icons-logos/logo_AP.svg" alt="Logo Apolline Ponce" width="80px" height="80px"></a>
+                    </li>
                     <li><a href="#accueil">Accueil</a></li>
                     <li><a href="#contact">Contact</a></li>
                     <li><a href="#competences">Compétences</a></li>
@@ -94,20 +96,20 @@
                     <h2 class="titre h2 noir">Contactez-moi</h2>
                 </div>
                 <div class="flex_contact">
-                    <div class="taille_icone">
+                    <div id="adresse" class="taille_icone">
                         <img src="Images-icons-logos/position.svg" alt="Icône adresse"/>
                         <h3 class="titre h3 noir">Adresse</h3>
-                        <p>Montpellier Hopitaux-Facultés</p>
+                        <a href="http://maps.google.com/?q= Montpellier Hopitaux-Facultés" target="_blank">Montpellier Hopitaux-Facultés</a>
                     </div>
                     <div id="mail" class="taille_icone">
                         <img src="Images-icons-logos/mail.svg" alt="Icône mail"/>
                         <h3 class="titre h3 noir">Mail</h3>
                         <a href="mailto:apolline.ponce@outlook.fr">apolline.ponce@outlook.fr</a>
                     </div>
-                    <div class="taille_icone">
+                    <div id="tel" class="taille_icone">
                         <img src="Images-icons-logos/telephone.svg" alt="Icône téléphone"/>
                         <h3 class="titre h3 noir">Téléphone</h3>
-                        <p>06 52 02 66 82</p>
+                        <a href="tel:+33652026682">06 52 02 66 82</a>
                     </div>
                 </div>
         </section>
@@ -363,6 +365,19 @@
                 </div>
             </div>
         </section>
+        <section>
+            <a href="#accueil" id="fleche_retour"></a>
+        </section>
     </main>
 </body>
+
+<footer>
+    <div>
+        <a href="#accueil"><img src="Images-icons-logos/logo_AP.svg" alt="Logo Apolline Ponce" width="50px" height="50px"></a>
+    </div>
+    <div>
+        © 2023 Apolline Ponce
+    </div>
+</footer>
 </html>
+
